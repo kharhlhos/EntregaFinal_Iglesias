@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Página</title>
+</head>
+<body>
+    <h1>Eliminar Página</h1>
+    <p>¿Estás seguro de que deseas eliminar "{{ page.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+    </form>
+    <a href="{% url 'page_list' %}">Cancelar</a>
+</body>
+</html>
